@@ -1,0 +1,15 @@
+/*Set top and bottom margins for p element to 0. Allow for more precise placement using classes*/
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*Set padding for the main body as well as background color and font*/
+body{
+    margin: 0px;
+    padding-top: 80px;
+    padding-left: 96px;
+    padding-right: 24px;
+    background-color: rgb(248,248,248);
+    font-family: Roboto, arial;
+}

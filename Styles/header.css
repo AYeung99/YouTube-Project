@@ -1,0 +1,163 @@
+/*Set header to be a flexbox, set its position within the page, make it fixed to always stay on top, 
+set its height, spread columns out horizontally (using justify-content: space-between)*/
+.header{
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+/*Set background color to white and add a 1px wide solid border. z-index of 100 to ensure it shows on top*/
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(288, 288, 288);
+    z-index: 100;
+}
+
+/*Set to flexbox and align items to center*/
+.left-section{
+    display: flex;
+    align-items: center;
+}
+
+/*Set to flexbox, align in center, and take up remaining space (using flex:1). Also adjust left and right margins, and max width*/
+.middle-section{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+}
+
+/*Set to flexbox, align items to center, spread out items (using justify-content: space-between), set width and right margin so it has room from the edge*/
+.right-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    margin-right: 20px;
+    /*Don't shrink elements when resizing window*/
+    flex-shrink: 0;
+}
+
+/*Set height. Use left and right margins to center the icon*/
+.hamburger-menu{
+    height: 20px;
+    margin-left: 24px;
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.youtube-logo{
+    height: 20px;
+    cursor: pointer;
+}
+
+/*Adjust the height and width of search button. Also set background color as well as a 1px solid border*/
+.search-button{
+    height: 40px;
+    width: 60px;
+    background-color: rgb(240,240,240);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192,192,192);
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+/*Set height and width for voice button. Set button to round (border-radius: 50%). Remove border and set background color*/
+.voice-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(245,245,245);
+}
+
+/*Set searchbox to take up remaining space (flex: 1). Adjust height, left padding, font size, border, and border radius to curve edges*/
+.searchbox{
+    flex: 1;
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(192,192,192);
+    border-radius: 2px;
+/*Set shadow to inside of box (inset) 1px to the right, 2px to the bottom, and 3px blurred. RGB of black with opacity of 0.5*/
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, .05);
+}
+
+/*Adjust height for icons*/
+.search-icon{
+    height: 25px;
+}
+
+.voice-icon{
+    height: 25px;
+}
+
+.upload{
+    height: 24px;
+}
+
+.apps{
+    height: 24px;
+}
+
+.notifications{
+    height: 24px;
+}
+
+/*Set height for channel icon and make round (border-radius: 50%)*/
+.my-channel{
+    height: 32px;
+    border-radius: 50%;
+}
+
+/*Set notifications position to relative so notification counter can be placed*/
+.notifications-icon-container{
+    position: relative;
+}
+
+/*Set notification count to absolute so it can reside within the notifications container. Adjust position to top right using negative values.
+Change background and text color, as well as font size. Adjust padding on all sides and change to round using border radius*/
+.notifications-count{
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: red;
+    color: white;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+/*Adjust the tooltip position, background color, text color, padding on all sides, border radius, font size, and positioning from the bottom.
+Also adjust opacity and adjust the transition period to .15s. Disable any pointer events when hovering over tooltip and make sure it doesn't wrap*/
+.search-button .tooltip, .voice-button .tooltip, .upload-div .tooltip, .apps-div .tooltip, .channel-div .tooltip, .notifications-icon-container .tooltip{
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity .15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+/*Set opacity of tooltip to 1 when hovering*/
+.search-button:hover .tooltip, .voice-button:hover .tooltip, .upload-div:hover .tooltip, .apps-div:hover .tooltip, .channel-div:hover .tooltip, .notifications-icon-container:hover .tooltip{
+    opacity: 1;
+}
+
+/*Change buttons to flexbox and center using justify-content. Align all items center and change cursor to*/
+.search-button, .voice-button, .upload-div, .apps-div, .channel-div, .notifications-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

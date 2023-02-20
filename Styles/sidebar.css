@@ -1,0 +1,40 @@
+/*Set sidebar to be fixed so it's always on screen. Adjust position from the left, bottom, and top. Set top to 55px so it doesn't interfere with header.
+Change background color, width, and z-index to 200 so it's always visible.*/
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-color: white;
+    width: 72px;
+    z-index: 100;
+    padding-top: 5px;
+}
+
+/*Adjust height of each box and space between icons. Change to flexbox set direction to vertical (using flex-direction: column)
+Align items to center horizontally (align-items: center) and vertically (justify-content: center) (reversed when flex-direction: column) */
+.sidebar-link{
+    height: 74px;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/*Change background color of the box when hovered*/
+.sidebar-link:hover{
+    background-color: rgb(235,235,235);
+}
+
+/*Adjust the size of the images and the spacing between the icon and text underneath*/
+.sidebar-link img{
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+/*Set the font size for the icon text*/
+.sidebar-link div{
+    font-size: 10px;
+}
